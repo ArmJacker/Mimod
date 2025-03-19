@@ -8,6 +8,9 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 header {
@@ -53,16 +56,17 @@ header {
 main {
   text-align: center;
   padding: 50px 20px;
+  flex-grow: 1;
 }
 
 .welcome-text {
-  position: center;
   font-size: 36px;
   color: #ffffff;
   margin-top: 20px;
+  position: relative;
   transform: translateY(-325%);
-  position: absolute;
-  right: 825px;
+  text-align: center;
+  padding: 0 20px;
 }
 
 footer {
@@ -70,6 +74,7 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
+  margin-top: auto;
 }
 
 .card-section {
@@ -130,7 +135,9 @@ footer {
   border-radius: 5px;
 }
 
-@media (max-width: 768px) {
+/* Device-specific Media Queries */
+@media (max-width: 1024px) {
+  /* Tablet (Portrait and smaller screens) */
   .card-section {
     justify-content: center;
   }
@@ -139,9 +146,84 @@ footer {
     width: 160px;
     height: 220px;
   }
+
+  .card-content img {
+    width: 160px;
+    height: 140px;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .welcome-text {
+    font-size: 28px;
+    position: relative;
+    transform: none;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .messageBox {
+    width: 80%;
+    padding: 10px;
+  }
+
+  #messageInput {
+    width: 80%;
+  }
+
+  #sendButton {
+    width: fit-content;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Tablet or smaller (Portrait View) */
+  .card-section {
+    justify-content: center;
+  }
+
+  .card {
+    width: 160px;
+    height: 220px;
+  }
+
+  .card-content img {
+    width: 140px;
+    height: 120px;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .welcome-text {
+    font-size: 24px;
+    margin: 0;
+    padding: 10px;
+  }
+
+  /* Message Box */
+  .messageBox {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+  }
+
+  #messageInput {
+    width: 100%;
+  }
+
+  #sendButton {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 480px) {
+  /* Phone (Portrait) */
   .card-section {
     justify-content: center;
     gap: 10px;
@@ -151,7 +233,47 @@ footer {
     width: 140px;
     height: 200px;
   }
-} 
+
+  .card-content img {
+    width: 120px;
+    height: 100px;
+  }
+
+  .card-title {
+    font-size: 12px;
+  }
+
+  .welcome-text {
+    font-size: 18px;
+    margin: 0;
+    padding: 10px;
+  }
+
+  /* Adjusting the message box for mobile */
+  .messageBox {
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Larger touchable input field for mobile */
+  #messageInput {
+    width: 100%;
+  }
+
+  #sendButton {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* Specific styling for small devices (Phone and Tablet) */
+body.small-screen .card {
+  width: 140px;
+  height: 200px;
+}
+
+/* Styling for the message box */
 .messageBox {
   width: fit-content;
   height: 40px;
@@ -164,10 +286,14 @@ footer {
   border: 1px solid rgb(63, 63, 63);
   position: absolute;
   right: 825px;
+  bottom: 20px;
 }
+
 .messageBox:focus-within {
   border: 1px solid rgb(110, 110, 110);
 }
+
+/* Styling for file upload input */
 .fileUploadWrapper {
   width: fit-content;
   height: 100%;
@@ -180,6 +306,7 @@ footer {
 #file {
   display: none;
 }
+
 .fileUploadWrapper label {
   cursor: pointer;
   width: fit-content;
@@ -189,26 +316,33 @@ footer {
   justify-content: center;
   position: relative;
 }
+
 .fileUploadWrapper label svg {
   height: 18px;
 }
+
 .fileUploadWrapper label svg path {
   transition: all 0.3s;
 }
+
 .fileUploadWrapper label svg circle {
   transition: all 0.3s;
 }
+
 .fileUploadWrapper label:hover svg path {
   stroke: #fff;
 }
+
 .fileUploadWrapper label:hover svg circle {
   stroke: #fff;
   fill: #3c3c3c;
 }
+
 .fileUploadWrapper label:hover .tooltip {
   display: block;
   opacity: 1;
 }
+
 .tooltip {
   position: absolute;
   top: -40px;
@@ -216,7 +350,6 @@ footer {
   opacity: 0;
   color: white;
   font-size: 10px;
-  text-wrap: nowrap;
   background-color: #000;
   padding: 6px 10px;
   border: 1px solid #3c3c3c;
@@ -224,6 +357,7 @@ footer {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.596);
   transition: all 0.3s;
 }
+
 #messageInput {
   width: 200px;
   height: 100%;
@@ -232,11 +366,6 @@ footer {
   border: none;
   padding-left: 10px;
   color: white;
-}
-#messageInput:focus ~ #sendButton svg path,
-#messageInput:valid ~ #sendButton svg path {
-  fill: #3c3c3c;
-  stroke: white;
 }
 
 #sendButton {
@@ -251,13 +380,16 @@ footer {
   cursor: pointer;
   transition: all 0.3s;
 }
+
 #sendButton svg {
   height: 18px;
   transition: all 0.3s;
 }
+
 #sendButton svg path {
   transition: all 0.3s;
 }
+
 #sendButton:hover svg path {
   fill: #3c3c3c;
   stroke: white;
