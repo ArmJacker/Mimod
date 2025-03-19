@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mi Mod</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="Mi start.html">
+        <img src="αρχείο λήψης.png" alt="Website Logo">
+      </a>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search..." oninput="searchFunction()" />
+      <button onclick="searchFunction()">Search</button>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="welcome-text">Welcome to Mi Mod</h1>
+
+    <div id="error-message" style="display:none; color: red;">
+      <p>No results found for your search.</p>
+      <div class="messageBox">
+        <div class="fileUploadWrapper">
+          <label for="file">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 337 337">
+              <circle
+                stroke-width="20"
+                stroke="#6c6c6c"
+                fill="none"
+                r="158.5"
+                cy="168.5"
+                cx="168.5"
+              ></circle>
+              <path
+                stroke-linecap="round"
+                stroke-width="25"
+                stroke="#6c6c6c"
+                d="M167.759 79V259"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-width="25"
+                stroke="#6c6c6c"
+                d="M79 167.138H259"
+              ></path>
+            </svg>
+            <span class="tooltip">Add an image</span>
+          </label>
+          <input type="file" id="file" name="file" />
+        </div>
+        <input required placeholder="Message..." type="text" id="messageInput" />
+        <button id="sendButton" onclick="sendMessage()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 664 663">
+            <path
+              fill="none"
+              d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888"
+            ></path>
+            <path
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke-width="33.67"
+              stroke="#6c6c6c"
+              d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <section class="card-section">
+      <div class="card" data-file="https://files.an1.co/car-parking-multiplayer-mod_4.8.24.4-an1.com.apk" onclick="downloadFile(this)">
+        <div class="card-content">
+          <img src="https://an1.com/uploads/posts/2022-02/1643800246_car-parking-multiplayer.jpg" alt="Card Image">
+          <h2 class="card-title">Car Parking Multiplayer</h2>
+        </div>
+      </div>
+      <div class="card" data-file="files/card2.zip" onclick="downloadFile(this)">
+        <div class="card-content">
+          <img src="assets/images/card-image2.jpg" alt="Card Image">
+          <h2 class="card-title">Card 2</h2>
+        </div>
+      </div>
+      <div class="card" data-file="files/card3.zip" onclick="downloadFile(this)">
+        <div class="card-content">
+          <img src="assets/images/card-image3.jpg" alt="Card Image">
+          <h2 class="card-title">Card 3</h2>
+        </div>
+      </div>
+      <div class="card" data-file="files/card4.zip" onclick="downloadFile(this)">
+        <div class="card-content">
+          <img src="assets/images/card-image4.jpg" alt="Card Image">
+          <h2 class="card-title">Card 4</h2>
+        </div>
+      </div>
+      <div class="card" data-file="files/card2.zip" onclick="downloadFile(this)">
+        <div class="card-content">
+          <img src="assets/images/card-image2.jpg" alt="Card Image">
+          <h2 class="card-title">Card 2</h2>
+        </div>
+      </div>
+      <div class="card" data-file="files/card2.zip" onclick="downloadFile(this)">
+        <div class="card-content">
+          <img src="assets/images/card-image2.jpg" alt="Card Image">
+          <h2 class="card-title">Card 2</h2>
+        </div>
+      </div>
+      <div class="card" data-file="files/card2.zip" onclick="downloadFile(this)">
+        <div class="card-content">
+          <img src="assets/images/card-image2.jpg" alt="Card Image">
+          <h2 class="card-title">Card 2</h2>
+        </div>
+      </div>
+      <div class="card" data-file="files/card2.zip" onclick="downloadFile(this)">
+        <div class="card-content">
+          <img src="assets/images/card-image2.jpg" alt="Card Image">
+          <h2 class="card-title">Card 2</h2>
+        </div>
+      </div>
+    </section>
+    <section class="card-section">
+      <div class="card" data-file="" onclick="downloadFile(this)">
+        <div class="card-content">
+          <img src="" alt="Card Image">
+          <h2 class="card-title"></h2>
+        </div>
+      </div>
+      <div class="card" data-file="files/card2.zip" onclick="downloadFile(this)">
+        <div class="card-content">
+          <img src="assets/images/card-image2.jpg" alt="Card Image">
+          <h2 class="card-title">Card 2</h2>
+        </div>
+      </div>
+      <div class="card" data-file="files/card3.zip" onclick="downloadFile(this)">
+        <div class="card-content">
+          <img src="assets/images/card-image3.jpg" alt="Card Image">
+          <h2 class="card-title">Card 3</h2>
+        </div>
+      </div>
+      <div class="card" data-file="files/card4.zip" onclick="downloadFile(this)">
+        <div class="card-content">
+          <img src="assets/images/card-image4.jpg" alt="Card Image">
+          <h2 class="card-title">Card 4</h2>
+        </div>
+      </div>
+      <div class="card" data-file="files/card2.zip" onclick="downloadFile(this)">
+        <div class="card-content">
+          <img src="assets/images/card-image2.jpg" alt="Card Image">
+          <h2 class="card-title">Card 2</h2>
+        </div>
+      </div>
+      <div class="card" data-file="files/card2.zip" onclick="downloadFile(this)">
+        <div class="card-content">
+          <img src="assets/images/card-image2.jpg" alt="Card Image">
+          <h2 class="card-title">Card 2</h2>
+        </div>
+      </div>
+      <div class="card" data-file="files/card2.zip" onclick="downloadFile(this)">
+        <div class="card-content">
+          <img src="assets/images/card-image2.jpg" alt="Card Image">
+          <h2 class="card-title">Card 2</h2>
+        </div>
+      </div>
+      <div class="card" data-file="files/card2.zip" onclick="downloadFile(this)">
+        <div class="card-content">
+          <img src="assets/images/card-image2.jpg" alt="Card Image">
+          <h2 class="card-title">Card 2</h2>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Mi Mod</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
