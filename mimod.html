@@ -9,21 +9,66 @@
 </head>
 <body>
 
-  <header>
-    <div class="logo">
-      <a href="mimod.html">
-        <img src="αρχείο λήψης.png" alt="Website Logo">
-      </a>
+  <header> 
+    <div class="nav">
+      <div class="container">
+        <div class="btn" onclick="window.location.href='mimod.html';">Home</div>
+        <div class="btn" onclick="window.location.href='contact.html';">contact</div>
+        <div class="btn" onclick="window.location.href='about.html';">About</div>
+        <div class="btn">FAQ</div>
+        <svg
+          class="outline"
+          overflow="visible"
+          width="400"
+          height="60"
+          viewBox="0 0 400 60"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            class="rect"
+            pathLength="100"
+            x="0"
+            y="0"
+            width="400"
+            height="60"
+            fill="transparent"
+            stroke-width="5"
+          ></rect>
+        </svg>
+      </div>
     </div>
 
-    <div class="search-bar">
-      <input type="text" id="search" placeholder="Search..." oninput="searchFunction()" />
-      <button onclick="searchFunction()">Search</button>
-    </div>
+    <div class="input-wrapper">
+  <button class="icon">
+    <svg
+      width="25px"
+      height="25px"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+        stroke="#fff"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+      <path
+        d="M22 22L20 20"
+        stroke="#fff"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+    </svg>
+  </button>
+  <input type="text" name="text" class="input" placeholder="search.." />
+</div>
+
   </header>
 
   <main>
-    <h1 class="welcome-text">Welcome to Mi Mod</h1>
 
     <div id="error-message" style="display:none; color: red;">
       <p>No results found for your search.</p>
@@ -42,18 +87,19 @@
           <h2 class="card-title">Spotify Premium</h2>
         </div>
       </div>
-      <div class="card" data-file="https://drive.proton.me/urls/43SCKYNBCC#H5okc8Bza7h6" onclick="downloadFile(this)">
+      <div class="card" data-file="files/card3.zip" onclick="downloadFile(this)">
         <div class="card-content">
-          <img src="https://tvapk.link/wp-content/uploads/2024/11/2024110601365640.png.webp" alt="Card Image">
-          <h2 class="card-title">Tele Latino</h2>
+          <img src="assets/images/card-image3.jpg" alt="Card Image">
+          <h2 class="card-title"></h2>
         </div>
       </div>
     </section>
+    
 
   </main>
 
   <footer>
-    <p>&copy; Mi Mod</p>
+    <p>&copy; Mi Mod</p> 
   </footer>
 
   <script src="script.js"></script>
