@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mi Mod</title>
+  <link rel="stylesheet" href="Mimod.css">
+</head>
+<body>
+  <div class="card">
+    <img src="αρχείο λήψης.png" alt="Mi mod" class="app-logo">
+    <div class="header">
+      <center><span class="welcometo">Welcome to</span> <br> <span class="python">Mi Mod</span></center>
+    </div> 
+    <label for="switch" class="switch">
+    <input id="switch" type="checkbox" />
+    <span class="slider"></span>
+    <span class="decoration"></span>
+    </label>
+  
+
+    <button class="App-button" onclick="window.location.href='mimod.html';">Start Exploring</button>
+  </div>
+  <script>
+    const switchButton = document.getElementById("switch");
+    const body = document.body;
+
+    if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+    switchButton.checked = true;
+    } else {
+    body.classList.add("light-mode");
+    switchButton.checked = false;
+    }
+
+    switchButton.addEventListener("change", () => {
+    if (switchButton.checked) {
+    body.classList.remove("light-mode");
+    body.classList.add("dark-mode");
+    localStorage.setItem("theme", "dark");
+    } else {
+    body.classList.remove("dark-mode");
+    body.classList.add("light-mode");
+    localStorage.setItem("theme", "light");
+    }
+    });
+
+  </script>
+</body>
+</html>
