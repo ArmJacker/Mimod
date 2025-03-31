@@ -349,6 +349,7 @@ footer {
     padding: 5px 10px;
     color: white;
   }
+  
   .card {
     width: 100px;
     height: 150px;
@@ -361,6 +362,7 @@ footer {
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+  
   .card-content img {
     width: 90px;
     height: 80px;
@@ -368,12 +370,13 @@ footer {
     border-radius: 10px;
     max-height: 100px;
   }
+
   .container:hover .outline .rect {
     transition: 999999s;
     stroke-dashoffset: 1;
     stroke-dasharray: 0;
   }
-  
+
   .container {
     position: absolute;
     inset: 0;
@@ -383,5 +386,47 @@ footer {
     justify-content: space-around;
     align-items: center;
     padding: 0.5em;
+  }
+
+  #navbody {
+    width: 250px;
+    height: 50px;
+    border-radius: 30px; 
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.041); 
+
+  .ul {
+    list-style: none;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding: 0 10px; 
+  }
+
+  .ul .li {
+    display: inline-block;
+  }
+
+  .svg {
+    width: 50px;
+    height: 50px;
+    opacity: 80%;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.2s;
+  }
+
+  .ul .li .svg:hover {
+    transition: 0.1s;
+    color: rgb(235, 40, 176);
+    position: relative;
+    margin-top: -4px;
+    opacity: 100%;
+  }
+
+  .radio:checked + label .li .svg {
+    color: rgb(235, 40, 176);
+    fill-rule: evenodd;
   }
 }
